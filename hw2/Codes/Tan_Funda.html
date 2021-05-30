@@ -1,0 +1,137 @@
+<script>
+//Iteratıon statements provided
+//For
+//String
+   var myString = "apple";
+   for(var i = 0; i < 5; i++)
+     document.write(myString[i]);
+   document.write("\n");
+
+//Array
+   var i = 0;
+   var myArray = [1, 2, 3, 4, 5];
+   for(var i = 0; i < 5; i++){
+     document.write(myArray[i]);
+   }
+   document.write("\n");
+
+//For-in
+//Associative Array
+  var myArray2 = {"Name":'Funda', "Surname":'Tan' };
+  for(var key in myArray2)
+    document.write(myArray2[key] + " ");
+
+//String
+  for(const x of myString)
+    document.write(x);
+  document.write("\n");
+
+//For-of
+//Array
+  for(const x of myArray)
+   document.write(x);
+  document.write("\n");
+
+//String
+  for(const x of myString)
+   document.write(x);
+  document.write("\n");
+
+//While
+//String
+   i = 0;
+   while(i < 5){
+     document.write(myString[i]);
+     i++;
+   }
+   document.write("\n");
+
+//Array
+  i = 0;
+  while (i < 5){
+      document.write(myArray[i]);
+      i++;
+  }
+  document.write("\n");
+
+//Do-While
+//String
+  i = 0;
+  do{
+    document.write(myString[i]);
+    i++;
+  } while(i < 5);
+  document.write("\n");
+
+
+//Array
+  i = 0;
+  do{
+      document.write(myArray[i]);
+      i++;
+  } while (i < 5);
+  document.write("\n");
+
+//The way that next item accessed
+//For
+//Loop condition is tested before the execution of for loop
+//String
+   var myString = "apple";
+   for(var i = 0; i < 5; i++){
+     document.write(myString[i]);
+     document.write("In for loop");
+     i = 10;
+   }
+   document.write("\n");
+//Array
+   var i = 0;
+   var myArray = [1, 2, 3, 4, 5];
+   for(var i = 0; i < 5; i++){
+     document.write(myArray[i]);
+     document.write("In for loop two");
+     i = 10;
+   }
+   document.write("\n");
+
+//While
+//Loop condition is tested before the execution of while loop
+//String
+   i = 0;
+   while(i < 5){
+     document.write(myString[i]);
+     i = 10;
+     document.write("In while loop");
+   }
+   document.write("\n");
+
+//Array
+  i = 0;
+  while (i < 5){
+      document.write(myArray[i]);
+      i = 10;
+      document.write("In while loop two");
+  }
+  document.write("\n");
+
+//Do-While
+//Loop condition is tested after the execution of while loop
+//String
+  i = 0;
+  do{
+    document.write(myString[i]);
+    i = 10;
+    document.write("In do-while loop");
+  } while(i < 5);
+  document.write("\n");
+
+
+//Array
+  i = 0;
+  do{
+    document.write(myArray[i]);
+    document.write("In do-while loop two");
+	i++;
+  } while (i < 5);
+  document.write("\n");
+
+</script>

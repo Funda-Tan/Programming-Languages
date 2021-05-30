@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+var a = true;
+var b = true;
+var c = false;
+
+alert("BOOLEAN OPERATORS AND DATA TYPES FOR OPERANDS");
+alert(a && b)
+alert(a || b)
+alert(!a)
+
+alert("OPERATOR PRECEDENCE RULES");
+var result = a || b && c
+alert(result)
+result = (a || b) && c
+alert(result)
+result = a || (b && c)
+alert(result)
+
+//AND have precedence over OR
+
+var result2 = !a || b
+alert(result2)
+result2 = !(a || b)
+alert(result2)
+result2 = (!a) || b
+alert(result2)
+
+//NOT have precedence over OR
+
+//OPERATOR ASSOCIATIVITY RULES and OPERAND EVALUATION ORDER
+
+
+alert("OPERATOR ASSOCIATIVITY RULES and OPERAND EVALUATION ORDER");
+
+function func1(){
+   alert("func1");
+   return true;
+}
+
+function func2(){
+   alert("func2");
+   return true;
+}
+
+function func3(){
+   alert("func3");
+   return true;
+}
+
+result2 = func1() && func2() && func3();
+
+//func1's output is a, func2's output is b, func3's output is c
+
+alert(result2);
+
+result2 = !func1() || !func2() || func3();
+
+//func1's output is a, func2's output is b, func3's output is c
+
+alert(result2);
+
+/*OR and AND operators has left to right associativity because leftmost function is evaluated first*/
+
+/*AND and OR operands are evaluated left to right because they evaluated func1 and stopped. Operand evaluation order is from left to right for AND and OR operators.*/
+
+a = false;
+b = false;
+
+result2 = !a && b;
+alert(result2);
+
+result2 = !(a && b);
+alert(result2);
+
+result2 = (!a) && b;
+alert(result2);
+
+//Result of !a && b is like (!a) && b so ! operator is right associative
+
+//SHORT-CIRCUIT EVALUATION
+
+alert("SHORT-CIRCUIT EVALUATION");
+
+result2 = !func1() && func2() && func3();
+//func1's return value is false
+
+alert(result2);
+
+//Only func1 is evaluated, other ones are not executed because of short-circuit.
+
+result2 = func1() || func2() || func3();
+//func1's return value is true
+
+alert(result2);
+
+//Only func1 is evaluated, other ones are not executed because of short-circuit.
+
+</script>
+</body>
+</html> 
